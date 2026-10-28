@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Primary Meta Tags -->
+  <title>Badri Puligilla | B.Tech CSE (Data Science) Student & Aspiring Developer</title>
+  <meta name="title" content="Badri Puligilla | B.Tech CSE (Data Science) Student & Aspiring Developer">
+  <meta name="description" content="Personal portfolio of Badri Puligilla, a first-year B.Tech CSE (Data Science) student at Malla Reddy Deemed to be University learning Python and web development. Explore projects, skills, and learning journey.">
+  <meta name="keywords" content="Badri Puligilla, B.Tech CSE Data Science, Python, Web Development, Portfolio, Malla Reddy Deemed to be University, Student Developer">
+  <meta name="author" content="Badri Puligilla">
+  <meta name="theme-color" content="#070b18">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://puligillabadri13-ops.github.io/">
+  <meta property="og:title" content="Badri Puligilla | Portfolio">
+  <meta property="og:description" content="First-year B.Tech CSE (Data Science) student learning Python and Web Development. Explore projects, certificates, and learning milestones.">
+
+  <!-- Google Fonts: Space Grotesk (Headings) & Inter (Body) & JetBrains Mono (Code/Badges) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons (Reliable CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Animated Background Canvas & Glow Orbs -->
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+  <div class="ambient-glow-orb orb-1" aria-hidden="true"></div>
+  <div class="ambient-glow-orb orb-2" aria-hidden="true"></div>
+  <div class="ambient-glow-orb orb-3" aria-hidden="true"></div>
+
+  <!-- Mouse Following Subtle Glow Light (Desktop) -->
+  <div class="mouse-follower" id="mouse-follower" aria-hidden="true"></div>
+
+  <!-- ==============================================================================
+       NAVIGATION BAR
+       ============================================================================== -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo" aria-label="Badri Puligilla Portfolio Homepage">
+        <div class="brand-emblem" aria-hidden="true">BP</div>
+        <div class="brand-name">
+          <span class="brand-title">Badri Puligilla</span>
+          <span class="brand-tag">CSE (Data Science)</span>
+        </div>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav id="nav-menu" class="nav-menu" role="navigation" aria-label="Main Navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#certificates" class="nav-link">Certificates</a>
+        <a href="#opportunities" class="nav-link">Opportunities</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-secondary btn-sm" id="nav-cta-btn">
+          <i class="fa-regular fa-paper-plane" aria-hidden="true"></i> Let's Connect
+        </a>
+        <!-- Mobile Hamburger Toggle -->
+        <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+          <i class="fa-solid fa-bars" id="toggle-icon" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ==============================================================================
+         1. HERO / HOME SECTION
+         ============================================================================== -->
+    <section class="hero-section" id="home" aria-label="Introduction and Hero Banner">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left Column: Introduction & CTA -->
+          <div class="hero-content reveal-on-scroll">
+            <div class="hero-badge">
+              <span class="pulse-dot"></span>
+              <span>Available for Beginner Internships & Learning</span>
+            </div>
+
+            <p class="hero-greeting">Hello, I'm</p>
+            <h1 class="hero-name">Badri <span class="text-gradient">Puligilla</span></h1>
+
+            <!-- Animated Typing Subtitle -->
+            <div class="typing-container" aria-live="polite">
+              <span class="typing-prefix">&gt;</span>
+              <span class="typing-text" id="typing-text">Python Learner</span>
+            </div>
+
+            <p class="hero-description">
+              First-year B.Tech CSE (Data Science) student at Malla Reddy Deemed to be University. Currently learning Python programming and web development, building practical projects, and seeking hands-on learning experiences.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="hero-cta">
+              <a href="#projects" class="btn btn-primary" id="hero-explore-btn">
+                <i class="fa-solid fa-rocket" aria-hidden="true"></i> Explore My Projects
+              </a>
+              <a href="#contact" class="btn btn-secondary" id="hero-contact-btn">
+                <i class="fa-regular fa-envelope" aria-hidden="true"></i> Contact Me
+              </a>
+            </div>
+
+            <!-- Verified Social Links -->
+            <div class="hero-socials">
+              <a href="https://github.com/puligillabadri13-ops" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="Badri's GitHub Profile">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/puligilla-badri-34a9a9416" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="Badri's LinkedIn Profile">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a href="mailto:26HEU08R160@mrdu.edu.in" class="social-pill" aria-label="Send email to Badri Puligilla">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <span>College Email</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Futuristic Cybernetic Developer Avatar -->
+          <div class="hero-visual-wrapper reveal-on-scroll delay-200">
+            <div class="hologram-stage" aria-label="Badri Puligilla Digital Avatar Illustration">
+              <!-- Animated Tech Orbit Rings -->
+              <div class="tech-ring ring-outer" aria-hidden="true"></div>
+              <div class="tech-ring ring-middle" aria-hidden="true"></div>
+              <div class="tech-ring ring-inner" aria-hidden="true"></div>
+
+              <!-- Center Holographic Developer Core -->
+              <div class="avatar-hologram">
+                <div class="avatar-core-icon" aria-hidden="true">
+                  <i class="fa-solid fa-user-astronaut"></i>
+                </div>
+                <div class="avatar-code-badge">&lt;Badri.dev /&gt;</div>
+              </div>
+
+              <!-- Orbiting Tech Chips -->
+              <div class="floating-chip chip-1" aria-hidden="true">
+                <i class="fa-brands fa-python" style="color: #38bdf8;"></i> Python
+              </div>
+              <div class="floating-chip chip-2" aria-hidden="true">
+                <i class="fa-solid fa-database" style="color: #c084fc;"></i> CSE (DS)
+              </div>
+              <div class="floating-chip chip-3" aria-hidden="true">
+                <i class="fa-solid fa-code" style="color: #38bdf8;"></i> HTML &amp; CSS
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down to About section">
+          <div class="scroll-mouse" aria-hidden="true">
+            <div class="scroll-wheel"></div>
+          </div>
+          <span>Scroll Down</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ==============================================================================
+         2. ABOUT SECTION
+         ============================================================================== -->
+    <section class="about-section" id="about" aria-label="About Badri Puligilla">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag">
+            <i class="fa-regular fa-user" aria-hidden="true"></i> About Me
+          </div>
+          <h2 class="section-title">My Journey &amp; <span class="text-gradient">Background</span></h2>
+          <p class="section-subtitle">A genuine perspective on where I stand, what I am learning, and where I aim to go.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left Column: Genuine Introduction Quote & Metadata -->
+          <div class="glass-card about-intro-card reveal-on-scroll">
+            <blockquote class="about-quote">
+              "Hi, I'm Badri Puligilla, a first-year B.Tech CSE (Data Science) student at Malla Reddy Deemed to be University. I'm learning Python and web development using HTML and CSS, and I enjoy building simple, useful projects that solve everyday problems. I'm interested in beginner-friendly internship programs, practical learning experiences, and opportunities to improve my programming skills. I'm continuously working on strengthening my technical knowledge and building projects that demonstrate my progress."
+            </blockquote>
+
+            <div class="about-meta-row">
+              <div class="meta-item">
+                <span class="meta-label">Full Name</span>
+                <span class="meta-value">Badri Puligilla</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Degree &amp; Year</span>
+                <span class="meta-value">B.Tech &bull; 1st Year</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Location</span>
+                <span class="meta-value">Hyderabad, India</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Status</span>
+                <span class="meta-value" style="color: var(--neon-cyan);">Open to Learning</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Academic & Goal Information Cards -->
+          <div class="about-cards-column" id="about-cards-container">
+            <!-- Dynamically populated or fallback rendered -->
+            <div class="info-card reveal-on-scroll delay-100">
+              <div class="info-icon-box">
+                <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+              </div>
+              <div class="info-details">
+                <span class="info-title">Degree Program</span>
+                <h3 class="info-value">B.Tech</h3>
+                <p class="info-subtitle">First-Year Undergraduate Student</p>
+              </div>
+            </div>
+
+            <div class="info-card reveal-on-scroll delay-200">
+              <div class="info-icon-box">
+                <i class="fa-solid fa-database" aria-hidden="true"></i>
+              </div>
+              <div class="info-details">
+                <span class="info-title">Specialization</span>
+                <h3 class="info-value">CSE (Data Science)</h3>
+                <p class="info-subtitle">Computer Science and Engineering with Data Science</p>
+              </div>
+            </div>
+
+            <div class="info-card reveal-on-scroll delay-300">
+              <div class="info-icon-box">
+                <i class="fa-solid fa-university" aria-hidden="true"></i>
+              </div>
+              <div class="info-details">
+                <span class="info-title">Institution</span>
+                <h3 class="info-value">Malla Reddy Deemed to be University</h3>
+                <p class="info-subtitle">Hyderabad, Telangana</p>
+              </div>
+            </div>
+
+            <div class="info-card reveal-on-scroll delay-400">
+              <div class="info-icon-box">
+                <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+              </div>
+              <div class="info-details">
+                <span class="info-title">Current Focus</span>
+                <h3 class="info-value">Python &amp; Web Development</h3>
+                <p class="info-subtitle">Foundations of HTML5, CSS3, &amp; Python Logic</p>
+              </div>
+            </div>
+
+            <div class="info-card reveal-on-scroll delay-400">
+              <div class="info-icon-box">
+                <i class="fa-solid fa-bullseye" aria-hidden="true"></i>
+              </div>
+              <div class="info-details">
+                <span class="info-title">Career Goal</span>
+                <h3 class="info-value">Practical Learning &amp; Internships</h3>
+                <p class="info-subtitle">Eager to contribute and grow under mentorship</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================================================
+         3. TECHNICAL SKILLS SECTION
+         ============================================================================== -->
+    <section class="skills-section" id="skills" aria-label="Technical Skills and Learning Areas">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag">
+            <i class="fa-solid fa-code" aria-hidden="true"></i> Core Competencies
+          </div>
+          <h2 class="section-title">Technical <span class="text-gradient">Skills</span></h2>
+          <p class="section-subtitle">Real skills currently being practiced with honest progress indicators. No exaggerated claims.</p>
+        </div>
+
+        <!-- Main Skills Cards Grid (Rendered dynamically or structured cleanly) -->
+        <div class="skills-grid" id="skills-container">
+          <!-- Skill 1: Python -->
+          <div class="glass-card skill-card reveal-on-scroll delay-100">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrapper" aria-hidden="true">
+                <i class="fa-brands fa-python" style="font-size: 2.2rem; color: #38bdf8;"></i>
+              </div>
+              <span class="skill-status-badge badge-blue">
+                <i class="fa-solid fa-clock-rotate-left"></i> Learning &amp; Practicing
+              </span>
+            </div>
+            <h3 class="skill-title">Python</h3>
+            <span class="skill-category">Programming &amp; Problem Solving</span>
+            <p class="skill-desc">
+              Learning Python programming fundamentals, problem-solving, functions, loops, data structures, and beginner-level program development.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-pill">Syntax &amp; Logic</span>
+              <span class="skill-pill">Functions &amp; Loops</span>
+              <span class="skill-pill">Data Structures</span>
+              <span class="skill-pill">Problem Solving</span>
+            </div>
+            <div class="skill-indicator-wrapper">
+              <div class="skill-indicator-meta">
+                <span>Learning Status</span>
+                <span>Active Practice</span>
+              </div>
+              <div class="indicator-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Python learning progress">
+                <div class="indicator-progress progress-python"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 2: HTML5 -->
+          <div class="glass-card skill-card reveal-on-scroll delay-200">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrapper" aria-hidden="true">
+                <i class="fa-brands fa-html5" style="font-size: 2.2rem; color: #fb923c;"></i>
+              </div>
+              <span class="skill-status-badge badge-orange">
+                <i class="fa-solid fa-hammer"></i> Learning &amp; Building
+              </span>
+            </div>
+            <h3 class="skill-title">HTML5</h3>
+            <span class="skill-category">Web Page Structure</span>
+            <p class="skill-desc">
+              Learning to structure web pages using HTML elements and semantic layouts.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-pill">Semantic Elements</span>
+              <span class="skill-pill">Forms &amp; Input</span>
+              <span class="skill-pill">Document Tree</span>
+              <span class="skill-pill">Accessibility</span>
+            </div>
+            <div class="skill-indicator-wrapper">
+              <div class="skill-indicator-meta">
+                <span>Learning Status</span>
+                <span>Building Layouts</span>
+              </div>
+              <div class="indicator-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="HTML learning progress">
+                <div class="indicator-progress progress-html"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 3: CSS3 -->
+          <div class="glass-card skill-card reveal-on-scroll delay-300">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrapper" aria-hidden="true">
+                <i class="fa-brands fa-css3-alt" style="font-size: 2.2rem; color: #c084fc;"></i>
+              </div>
+              <span class="skill-status-badge badge-purple">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> Learning &amp; Styling
+              </span>
+            </div>
+            <h3 class="skill-title">CSS3</h3>
+            <span class="skill-category">Styling &amp; Modern UI</span>
+            <p class="skill-desc">
+              Learning webpage styling, responsive layouts, animations, transitions, and modern visual design.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-pill">Flexbox &amp; Grid</span>
+              <span class="skill-pill">Responsive Design</span>
+              <span class="skill-pill">Transitions</span>
+              <span class="skill-pill">Glassmorphism</span>
+            </div>
+            <div class="skill-indicator-wrapper">
+              <div class="skill-indicator-meta">
+                <span>Learning Status</span>
+                <span>Responsive Styling</span>
+              </div>
+              <div class="indicator-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" aria-label="CSS learning progress">
+                <div class="indicator-progress progress-css"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Currently Learning / Exploring Box -->
+        <div class="currently-learning-box reveal-on-scroll">
+          <div class="learning-left">
+            <div class="learning-icon" aria-hidden="true">
+              <i class="fa-solid fa-compass"></i>
+            </div>
+            <div class="learning-content">
+              <h4>Currently Exploring &amp; Expanding</h4>
+              <p>Topics I am currently studying in college coursework and independent practice.</p>
+            </div>
+          </div>
+          <div class="learning-pills" id="currently-learning-pills">
+            <div class="explore-pill">
+              <i class="fa-solid fa-code-branch" aria-hidden="true"></i> Data Structures in Python
+            </div>
+            <div class="explore-pill">
+              <i class="fa-brands fa-git-alt" aria-hidden="true"></i> Git &amp; GitHub
+            </div>
+            <div class="explore-pill">
+              <i class="fa-brands fa-js" aria-hidden="true"></i> JavaScript Fundamentals
+            </div>
+            <div class="explore-pill">
+              <i class="fa-solid fa-chart-pie" aria-hidden="true"></i> Data Science Fundamentals
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================================================
+         4. PROJECTS SECTION
+         ============================================================================== -->
+    <section class="projects-section" id="projects" aria-label="Projects and Concepts">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag">
+            <i class="fa-solid fa-diagram-project" aria-hidden="true"></i> Featured Work
+          </div>
+          <h2 class="section-title">Academic &amp; Student <span class="text-gradient">Projects</span></h2>
+          <p class="section-subtitle">Real initiatives and hackathon concepts focused on solving practical challenges.</p>
+        </div>
+
+        <!-- Dynamic Container for Project Cards -->
+        <div class="projects-grid" id="projects-container">
+          <!-- Project 1: Student Study Planner -->
+          <article class="glass-card project-card reveal-on-scroll delay-100" id="project-card-student-study-planner">
+            <div class="project-visual visual-planner">
+              <span class="project-status-tag status-active">Student Project</span>
+              <div class="mockup-inner-frame" aria-hidden="true">
+                <div class="mockup-top-bar">
+                  <span class="mockup-dot dot-red"></span>
+                  <span class="mockup-dot dot-yellow"></span>
+                  <span class="mockup-dot dot-green"></span>
+                  <span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--text-dim); margin-left: 0.5rem;">planner-dashboard.app</span>
+                </div>
+                <div class="mockup-preview-body">
+                  <div class="mockup-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                  <div class="mockup-text-lines">
+                    <div class="mockup-line line-short line-cyan"></div>
+                    <div class="mockup-line line-medium"></div>
+                    <div class="mockup-line"></div>
+                  </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
+                  <span style="font-size: 0.65rem; font-family: var(--font-mono); color: var(--neon-cyan); background: rgba(0,240,255,0.1); padding: 2px 6px; border-radius: 4px;">Track Routine</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta-pill">
+                <i class="fa-solid fa-list-check" aria-hidden="true"></i> Productivity Tool
+              </div>
+              <h3 class="project-title">Student Study Planner &amp; Task Manager</h3>
+              <p class="project-description">
+                A student-focused productivity web application designed to help students organise daily academic work, track coding practice, monitor task progress, and manage reminders. It aims to make daily study routines more organised and consistent.
+              </p>
+
+              <div class="project-keypoints">
+                <div class="keypoint-item"><i class="fa-solid fa-check"></i> Daily academic schedule tracker</div>
+                <div class="keypoint-item"><i class="fa-solid fa-check"></i> Coding practice milestone monitor</div>
+                <div class="keypoint-item"><i class="fa-solid fa-check"></i> Task prioritization &amp; reminders</div>
+              </div>
+
+              <div class="project-techs">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+
+              <div class="project-actions">
+                <button type="button" class="btn btn-primary btn-sm project-live-btn" data-project-id="student-study-planner" aria-label="View Student Study Planner Project">
+                  <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> View Project
+                </button>
+                <button type="button" class="btn btn-secondary btn-sm project-github-btn" data-project-id="student-study-planner" aria-label="View GitHub Repository">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i> Repository
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: SIH 2026 - RUNTIME REBELS -->
+          <article class="glass-card project-card reveal-on-scroll delay-200" id="project-card-sih-2026">
+            <div class="project-visual visual-sih">
+              <span class="project-status-tag status-hackathon">Hackathon Concept</span>
+              <div class="mockup-inner-frame" aria-hidden="true">
+                <div class="mockup-top-bar">
+                  <span class="mockup-dot dot-red"></span>
+                  <span class="mockup-dot dot-yellow"></span>
+                  <span class="mockup-dot dot-green"></span>
+                  <span style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--text-dim); margin-left: 0.5rem;">sih2026-rebels.network</span>
+                </div>
+                <div class="mockup-preview-body">
+                  <div class="mockup-icon" style="color: var(--neon-purple);"><i class="fa-solid fa-network-wired"></i></div>
+                  <div class="mockup-text-lines">
+                    <div class="mockup-line line-short line-purple"></div>
+                    <div class="mockup-line line-medium"></div>
+                    <div class="mockup-line"></div>
+                  </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
+                  <span style="font-size: 0.65rem; font-family: var(--font-mono); color: #c084fc; background: rgba(176,38,255,0.12); padding: 2px 6px; border-radius: 4px;">Smart Education</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta-pill" style="color: #c084fc;">
+                <i class="fa-solid fa-trophy" aria-hidden="true"></i> Problem Statement: SIH26043
+              </div>
+              <h3 class="project-title">SIH 2026 – RUNTIME REBELS</h3>
+              <p class="project-description">
+                A Smart Education project concept focused on creating a digital platform where societal challenges can be shared and students, universities, and industry partners can collaborate to develop solutions.
+              </p>
+
+              <div class="project-keypoints" style="border-left-color: var(--neon-purple);">
+                <div class="keypoint-item"><i class="fa-solid fa-check" style="color: var(--neon-purple);"></i> Team: RUNTIME REBELS</div>
+                <div class="keypoint-item"><i class="fa-solid fa-check" style="color: var(--neon-purple);"></i> Theme: Smart Education (SIH26043)</div>
+                <div class="keypoint-item"><i class="fa-solid fa-check" style="color: var(--neon-purple);"></i> University-Industry collaboration hub</div>
+              </div>
+
+              <div class="project-techs">
+                <span class="tech-tag tech-tag-purple">Smart Education</span>
+                <span class="tech-tag tech-tag-purple">Collaborative Platform</span>
+                <span class="tech-tag tech-tag-purple">Web Concept</span>
+              </div>
+
+              <div class="project-actions">
+                <button type="button" class="btn btn-primary btn-sm project-live-btn" data-project-id="sih-2026-runtime-rebels" aria-label="View SIH 2026 Project Concept">
+                  <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> View Concept
+                </button>
+                <button type="button" class="btn btn-secondary btn-sm project-github-btn" data-project-id="sih-2026-runtime-rebels" aria-label="View GitHub Repository">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i> Repository
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================================================
+         5. CERTIFICATES & ACHIEVEMENTS SECTION
+         ============================================================================== -->
+    <section class="certificates-section" id="certificates" aria-label="Certificates and Milestones">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag">
+            <i class="fa-solid fa-award" aria-hidden="true"></i> Learning Milestones
+          </div>
+          <h2 class="section-title">Certificates &amp; <span class="text-gradient">Participation</span></h2>
+          <p class="section-subtitle">Documented learning courses and institutional technical events.</p>
+        </div>
+
+        <div class="certificates-grid" id="certificates-container">
+          <!-- Certificate 1: Python Course -->
+          <div class="glass-card cert-card reveal-on-scroll delay-100">
+            <div class="cert-header">
+              <div class="cert-icon-box" aria-hidden="true">
+                <i class="fa-brands fa-python"></i>
+              </div>
+              <span class="cert-status-pill">Foundations Completed</span>
+            </div>
+            <span class="cert-category">Coursework &amp; Practice</span>
+            <h3 class="cert-title">Python Course</h3>
+            <p class="cert-description">
+              Completed or participated in a Python learning course focused on programming fundamentals and building a foundation for further practice.
+            </p>
+            <div class="cert-footer">
+              <div class="cert-detail-badge">
+                <i class="fa-solid fa-circle-check" style="color: var(--neon-cyan);"></i> Participation / Learning
+              </div>
+              <button type="button" class="btn btn-secondary btn-sm cert-action-btn" data-cert-id="cert-python">
+                <i class="fa-solid fa-circle-info"></i> Details
+              </button>
+            </div>
+          </div>
+
+          <!-- Certificate 2: Denovate Event Participation -->
+          <div class="glass-card cert-card reveal-on-scroll delay-200">
+            <div class="cert-header">
+              <div class="cert-icon-box cert-icon-purple" aria-hidden="true">
+                <i class="fa-regular fa-lightbulb"></i>
+              </div>
+              <span class="cert-status-pill">Event Participant</span>
+            </div>
+            <span class="cert-category" style="color: #c084fc;">Innovation &amp; Tech Event</span>
+            <h3 class="cert-title">Denovate Event Participation</h3>
+            <p class="cert-description">
+              Participation in the Denovate event, representing an opportunity to explore innovation, technical ideas, and collaborative learning.
+            </p>
+            <div class="cert-footer">
+              <div class="cert-detail-badge">
+                <i class="fa-solid fa-circle-check" style="color: var(--neon-purple);"></i> Technical Exploration
+              </div>
+              <button type="button" class="btn btn-secondary btn-sm cert-action-btn" data-cert-id="cert-denovate">
+                <i class="fa-solid fa-circle-info"></i> Details
+              </button>
+            </div>
+          </div>
+
+          <!-- Certificate 3: Introduction to Basic Data Science -->
+          <div class="glass-card cert-card reveal-on-scroll delay-300">
+            <div class="cert-header">
+              <div class="cert-icon-box cert-icon-blue" aria-hidden="true">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <span class="cert-status-pill">Foundational Concepts</span>
+            </div>
+            <span class="cert-category" style="color: #38bdf8;">Data Science Foundation</span>
+            <h3 class="cert-title">Introduction to Basic Data Science</h3>
+            <p class="cert-description">
+              An introductory learning experience covering foundational data science concepts and helping build an understanding of the field.
+            </p>
+            <div class="cert-footer">
+              <div class="cert-detail-badge">
+                <i class="fa-solid fa-circle-check" style="color: var(--neon-blue);"></i> Foundational Learning
+              </div>
+              <button type="button" class="btn btn-secondary btn-sm cert-action-btn" data-cert-id="cert-data-science">
+                <i class="fa-solid fa-circle-info"></i> Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================================================
+         6. INTERNSHIP & LEARNING OPPORTUNITIES SECTION
+         ============================================================================== -->
+    <section class="opportunities-section" id="opportunities" aria-label="Internship and Collaboration Opportunities">
+      <div class="container">
+        <div class="opportunities-card reveal-on-scroll">
+          <div class="opportunities-top">
+            <div class="section-tag">
+              <i class="fa-solid fa-briefcase" aria-hidden="true"></i> Career Growth
+            </div>
+            <h3 class="text-gradient">Open to Learning Opportunities</h3>
+            <p>
+              As a first-year B.Tech CSE (Data Science) student, I'm looking for beginner-friendly internships, Python training opportunities, and practical projects that help me develop my programming and web development skills. I'm eager to learn from experienced developers, contribute to meaningful projects, and grow through hands-on experience.
+            </p>
+          </div>
+
+          <!-- 5 Opportunity Interest Areas -->
+          <div class="opportunity-items-grid">
+            <div class="opportunity-item">
+              <div class="opportunity-icon-box" aria-hidden="true">
+                <i class="fa-brands fa-python"></i>
+              </div>
+              <div class="opportunity-title">Python Internships</div>
+              <p class="opportunity-desc">Entry-level roles to practice programming logic, automation, and core Python.</p>
+            </div>
+
+            <div class="opportunity-item">
+              <div class="opportunity-icon-box" aria-hidden="true">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <div class="opportunity-title">Beginner Web Development</div>
+              <p class="opportunity-desc">Front-end building using HTML5, CSS3, and beginner JavaScript basics.</p>
+            </div>
+
+            <div class="opportunity-item">
+              <div class="opportunity-icon-box" aria-hidden="true">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <div class="opportunity-title">Student Projects</div>
+              <p class="opportunity-desc">Academic or open problems focused on practical implementation.</p>
+            </div>
+
+            <div class="opportunity-item">
+              <div class="opportunity-icon-box" aria-hidden="true">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div class="opportunity-title">Technical Learning Programs</div>
+              <p class="opportunity-desc">Structured mentorship, bootcamps, and guided developer workshops.</p>
+            </div>
+
+            <div class="opportunity-item">
+              <div class="opportunity-icon-box" aria-hidden="true">
+                <i class="fa-solid fa-users-gear"></i>
+              </div>
+              <div class="opportunity-title">Collaborative Opportunities</div>
+              <p class="opportunity-desc">Hackathon teams, peer study initiatives, and beginner open source.</p>
+            </div>
+          </div>
+
+          <div class="opportunities-cta">
+            <a href="https://www.linkedin.com/in/puligilla-badri-34a9a9416" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="opportunities-linkedin-btn">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> Connect With Me on LinkedIn
+            </a>
+            <span style="font-size: 0.85rem; color: var(--text-dim);">
+              <i class="fa-solid fa-shield-halved"></i> Ready to learn, commit, and contribute sincerely
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================================================
+         7. CONTACT SECTION
+         ============================================================================== -->
+    <section class="contact-section" id="contact" aria-label="Contact Badri Puligilla">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-tag">
+            <i class="fa-regular fa-paper-plane" aria-hidden="true"></i> Get In Touch
+          </div>
+          <h2 class="section-title">Let's <span class="text-gradient">Connect</span></h2>
+          <p class="section-subtitle">Reach out for internship opportunities, student projects, or technical conversations.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left Column: Contact Details Card -->
+          <div class="glass-card contact-info-card reveal-on-scroll delay-100">
+            <h3>Direct Contact Channels</h3>
+            <p class="contact-info-desc">
+              Feel free to connect directly via my official university email or professional social profiles. I will do my best to respond promptly.
+            </p>
+
+            <div class="contact-details-list">
+              <!-- Name -->
+              <div class="contact-detail-row">
+                <div class="contact-detail-icon" aria-hidden="true">
+                  <i class="fa-regular fa-user"></i>
+                </div>
+                <div>
+                  <span class="contact-detail-label">Name</span>
+                  <div class="contact-detail-value">Badri Puligilla</div>
+                </div>
+              </div>
+
+              <!-- University Email -->
+              <div class="contact-detail-row">
+                <div class="contact-detail-icon" aria-hidden="true">
+                  <i class="fa-regular fa-envelope"></i>
+                </div>
+                <div>
+                  <span class="contact-detail-label">University Email</span>
+                  <div class="contact-detail-value">
+                    <a href="mailto:26HEU08R160@mrdu.edu.in" id="contact-email-link" style="color: var(--neon-cyan);">
+                      26HEU08R160@mrdu.edu.in
+                    </a>
+                    <button type="button" class="copy-email-btn" id="copy-email-btn" title="Copy email address" aria-label="Copy email address">
+                      <i class="fa-regular fa-copy"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- GitHub Profile -->
+              <div class="contact-detail-row">
+                <div class="contact-detail-icon" aria-hidden="true">
+                  <i class="fa-brands fa-github"></i>
+                </div>
+                <div>
+                  <span class="contact-detail-label">GitHub Profile</span>
+                  <div class="contact-detail-value">
+                    <a href="https://github.com/puligillabadri13-ops" target="_blank" rel="noopener noreferrer" style="color: var(--neon-cyan);">
+                      github.com/puligillabadri13-ops
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- LinkedIn Profile -->
+              <div class="contact-detail-row">
+                <div class="contact-detail-icon" aria-hidden="true">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+                <div>
+                  <span class="contact-detail-label">LinkedIn Profile</span>
+                  <div class="contact-detail-value">
+                    <a href="https://www.linkedin.com/in/puligilla-badri-34a9a9416" target="_blank" rel="noopener noreferrer" style="color: var(--neon-cyan);">
+                      linkedin.com/in/puligilla-badri-34a9a9416
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: auto; padding: 1rem; border-radius: var(--radius-sm); background: rgba(0, 240, 255, 0.05); border: 1px dashed rgba(0, 240, 255, 0.25);">
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--neon-cyan); display: flex; align-items: center; gap: 0.5rem;">
+                <i class="fa-solid fa-clock"></i> Typical Response: 24 to 48 hours
+              </span>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Contact Form (Static compatible with mailto fallback) -->
+          <div class="glass-card contact-form-card reveal-on-scroll delay-200">
+            <form id="portfolio-contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Your Name *</label>
+                <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Alex Johnson" required autocomplete="name">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Your Email *</label>
+                <input type="email" id="contact-email" name="email" class="form-input" placeholder="e.g. alex@example.com" required autocomplete="email">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Subject *</label>
+                <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="e.g. Internship Inquiry / Student Project Collaboration" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message *</label>
+                <textarea id="contact-message" name="message" class="form-textarea" placeholder="Write your message or inquiry here..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" id="form-submit-btn" style="width: 100%;">
+                <i class="fa-regular fa-paper-plane" aria-hidden="true"></i> Send Message
+              </button>
+
+              <p class="form-notice">
+                <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                This static website dispatches your message directly via your email client to <strong>26HEU08R160@mrdu.edu.in</strong>.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==============================================================================
+       FOOTER
+       ============================================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Badri Puligilla</span>
+          <span class="footer-brand-sub">B.Tech CSE (Data Science) Student &bull; Malla Reddy Deemed to be University</span>
+        </div>
+
+        <div class="footer-links">
+          <a href="https://github.com/puligillabadri13-ops" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="GitHub">
+            <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/puligilla-badri-34a9a9416" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn
+          </a>
+          <a href="mailto:26HEU08R160@mrdu.edu.in" class="social-pill" aria-label="Email">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i> Email
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> Badri Puligilla. Built with clean HTML, CSS &amp; JavaScript. Hosted on GitHub Pages.</p>
+        <button type="button" class="back-to-top-btn" id="back-to-top-btn" aria-label="Back to top of the page">
+          <i class="fa-solid fa-arrow-up" aria-hidden="true"></i> Back to Top
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==============================================================================
+       INTERACTIVE MODAL FOR PROJECT & CERTIFICATE NOTICES
+       ============================================================================== -->
+  <div class="modal-overlay" id="info-modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close dialog">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-icon" id="modal-icon">
+        <i class="fa-solid fa-laptop-code"></i>
+      </div>
+      <h3 class="modal-title" id="modal-title">Project Details</h3>
+      <p class="modal-body-text" id="modal-body">Information preview...</p>
+      <div style="display: flex; justify-content: flex-end; gap: 0.75rem;">
+        <button type="button" class="btn btn-secondary btn-sm" id="modal-dismiss-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <!-- 1. Portfolio Configuration Data -->
+  <script src="projects.js"></script>
+  <!-- 2. Application Logic & Interactive Features -->
+  <script src="script.js"></script>
+</body>
+</html>
